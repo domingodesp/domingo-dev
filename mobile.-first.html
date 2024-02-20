@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+   <title>jdomingo_arte</title>
+   <style>
+
+      * {
+         padding: 0;
+         margin: 0;
+         font-family: "Poppins", sans-serif;
+      }
+
+      /* Medium devices (laptops) */
+      @media screen and (min-width: 768px) {
+
+         .flex-container {
+            height: 350px !important;
+            margin-top: 30px !important;
+            margin-inline: 30px !important;
+            position: relative;
+            background-color: #60a5fa !important;
+            margin-bottom: 50px !important;
+            background-image: none !important;
+            border-bottom-left-radius: 25px;
+            border-top-right-radius: 25px;
+         }
+
+         .flex-item-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 70%;
+            background-image: url(background-5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 5px 10px 10px rgb(39, 39, 39);
+         }
+
+         .flex-item-1 img {
+            width: 150px !important;
+            height: 150px !important;
+            border: 10px solid black;
+         }
+
+         .flex-item-2 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 70%;
+            background: rgb(147,235,255);
+            background: linear-gradient(90deg, rgba(147,235,255,1) 0%, rgba(39,166,247,1) 50%, rgba(18,18,129,1) 100%);
+            box-shadow: 5px 10px 10px rgb(39, 39, 39);
+         }
+
+         .flex-item-2 h1 {
+            font-size: 40px !important;
+            margin-bottom: 22px !important;
+         }
+
+         .flex-item-2 a {
+            font-size: 17px !important;
+         }
+
+         .flex-container-2 {
+            display: none !important;
+         }
+
+         .flex-container-3 {
+            gap: 70px !important;
+         }
+
+      }  
+
+      .flex-container {
+         display: flex;
+         height: 145px;
+         background: rgb(147,235,255);
+         background: linear-gradient(90deg, rgba(147,235,255,1) 0%, rgba(39,166,247,1) 50%, rgba(18,18,129,1) 100%);
+      }
+
+      .flex-item-1 img {
+         display: inline-block;
+         height: 120px;
+         width: 120px;
+         object-fit: cover;
+         object-position: center;
+         margin-top: 13px;
+         margin-left: 20px;
+         transition: opacity 0.15s;
+         cursor: pointer;
+      }
+
+      .flex-item-1 img:hover {
+         opacity: 0.85;
+      }
+
+      .flex-item-2 h1 {
+         color: white;
+         margin-bottom: 15px;
+         margin-top: 10px;
+         margin-left: 20px;
+         margin-right: 20px;
+         font-family: "Poppins", sans-serif;
+         font-weight: 300;
+         font-size: 27px;
+         line-height: 1.3;
+      }
+
+      .flex-item-2 a {
+         text-decoration: none;
+         color: white;
+         background-color: rgba(0, 0, 0, 0.767);
+         padding: 10px;
+         font-size: 11px;
+         margin-left: 20px;
+         font-family: "Poppins", sans-serif;
+         border-radius: 10px;
+         transition: background-color 0.4s, color 0.4s;
+      }
+
+      .flex-item-2 a:hover {
+         background-color: white;
+         color: black;
+      }
+
+      .flex-item-2 a:active {
+         opacity: 0.8
+      }
+
+      .flex-container-2 {
+         display: flex;
+         height: 100px;
+         background-image: url(background-5.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         margin-bottom: 35px;
+      }
+
+      .flex-container-3 {
+         display: flex;
+         margin-top: 20px;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 50px;
+         /* flex-direction: column;
+         align-items: center; */
+      }
+
+      .flex-item-4 {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         height: 470px;
+         width: 300px;
+         background-color: #cbd5e1;
+         border-top-right-radius: 16px;
+         border-top-left-radius: 16px;
+         box-shadow: 8px 8px 10px rgb(54, 54, 54);
+         cursor: pointer;
+      }
+
+      .flex-item-4 img {
+         width: 270px;
+         height: 300px;
+         object-fit: cover;
+         object-position: top;
+         transition: border-radius 0.2s;
+      }
+
+      .flex-item-4 img:hover {
+         border-radius: 135px;
+      }
+
+      .flex-item-4 h1 {
+         font-size: 30px;
+         font-weight: 600;
+         margin-top: 5px;
+      }
+
+      .flex-item-4 p {
+         font-size: 15px;
+         margin: 10px;
+         text-align: center;
+         margin-top: 5px;
+         background-color: #94a3b8;
+         border-radius: 15px;
+         padding: 4px;
+      }
+
+      .flex-item-5 {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         height: 470px;
+         width: 300px;
+         background-color: #cbd5e1;
+         margin-bottom: 20px;
+         margin-bottom: 50px;
+         border-top-right-radius: 16px;
+         border-top-left-radius: 16px;
+         box-shadow: 8px 8px 10px rgb(54, 54, 54);
+         cursor: pointer;
+      }
+
+      .flex-item-5 img {
+         width: 270px;
+         height: 300px;
+         object-fit: cover;
+         object-position: top;
+         transition: border-radius 0.2s;
+      }
+
+      .flex-item-5 img:hover {
+         border-radius: 135px;
+      }
+
+      .flex-item-5 h1 {
+         font-size: 30px;
+         font-weight: 600;
+         margin-top: 5px;
+      }
+
+      .flex-item-5 p {
+         font-size: 15px;
+         margin: 10px;
+         text-align: center;
+         margin-top: 3px;
+         background-color: #94a3b8;
+         border-radius: 15px;
+         padding: 4px 4px 15px 4px;
+      }
+
+      .Galería {
+         display: block;
+         background-color: #94a3b8;
+         color: black;
+         padding-left: 20px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+         margin-bottom: 28px;
+         font-weight: 300;
+         margin-inline: 30px;
+      }
+
+      .flex-container-4 {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 20px;
+         background-color: #e2e8f0;
+         padding-top: 20px;
+      }
+
+      .flex-container-4 div {
+         border: 10px double black;
+         width: 280px;
+         height: 380px;
+      }
+
+      .flex-container-4 img {
+         width: 280px;
+         height: 380px;
+         object-fit: cover;
+         object-position: center;
+         cursor: pointer;
+      }
+
+      .flex-container-5 {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 20px;
+         padding-top: 20px;
+         padding-bottom: 20px;
+         background-color: #e2e8f0;
+      }
+
+      .flex-container-5 div {
+         border: 10px double black;
+         width: 250px;
+         height: 220px;
+      }
+
+      .flex-container-5 img {
+         width: 250px;
+         height: 220px;
+         object-fit: cover;
+         object-position: center;
+         cursor: pointer;
+      }
+
+      .flex-container-6 {
+         display: flex;
+         height: 130px;
+         margin-top: 20px;
+         justify-content: center;
+         margin-bottom: 20px;
+         background-color: #94a3b8;
+      }
+
+      .contacto {
+         width: 350px;
+         background-color: #334155;
+         padding: 15px;
+         height: 100px;
+         border-radius: 10px;
+      }
+
+      .flex-container-6 ul {
+         display: flex;
+         list-style-type: none;
+      }
+
+      .flex-container-6 img {
+         display: inline-block;
+         width: 60px;
+         height: 60px;
+         border-radius: 30px;
+         object-fit: cover;
+         margin-top: 10px;
+         margin-left: 16px;
+      }
+
+      .contactame {
+         display: inline-block;
+         padding: 15px;
+         background-color: #94a3b8;
+         cursor: pointer;
+         font-family: 'Poppins';
+         color: black;
+         text-decoration: none;
+         border-radius: 10px;
+         font-weight: 600;
+         font-size: 15px;
+         margin-top: 13px;
+         margin-left: 13px;
+         transition: background-color 0.13s, color 0.13s;
+         cursor: pointer;
+      }
+
+      .contactame:hover {
+         color: white;
+         background-color: rgba(0, 0, 0, 0.774);
+      }
+
+      .contactame:active {
+         opacity: 0.6;
+      }
+
+      .mail {
+         color: white;
+         font-size: 18px;
+         margin-left: 13px;
+         display: inline-block;
+      }
+
+      .flex-container-7 {
+         display: flex;
+         justify-content: center;
+         background-color: black;
+         color: white;
+         padding-top: 20px;
+         padding-bottom: 20px;
+      }
+
+      .flex-container-7 p {
+         font-size: 13px;
+         margin-bottom: 10px;
+         text-align: center;
+      }
+
+   </style>
+</head>
+<body>
+
+   <div class="flex-container">
+      <div class="flex-item-1">
+         <a href="https://www.instagram.com/jdomingo_arte/" target="_blank"><img src="thumbnail.avif"></a>
+      </div>
+      <div class="flex-item-2">
+         <h1>José Domingo Arte</h1>
+         <a href="https://www.instagram.com/jdomingo_arte/" target="_blank">Ig @jdomingo_arte</a>
+      </div>
+   </div>
+
+   <div class="flex-container-2">
+      <div class="flex-item-3">
+      </div>
+   </div>
+
+   <div class="flex-container-3">
+      <div class="flex-item-4">
+         <img src="koopa.jpg">
+         <h1>Koops</h1>
+         <p>Koops es un personaje del juego Paper Mario: The Thousand-year Door.
+            Hecho con lápices Prismacolor y sharpie. </p>
+      </div>
+      <div class="flex-item-5">
+         <img src="calavera.jpg">
+         <h1>Golden Skull</h1>
+         <p>Calavera hecha con sharpie y lápices prismacolor. Representa el oro dentro de los seres humanos.</p>
+      </div>
+   </div>
+
+   <h1 class="Galería">Galería</h1>
+
+   <div class="flex-container-4">
+      <div class="flex-item-7">
+         <img src="Mario abeja.jpg">
+      </div>
+      <div class="flex-item-8">
+         <img src="Stitch.jpg">
+      </div>
+      <div class="flex-item-9">
+         <img src="Scrooge.jpg">
+      </div>
+      <div class="flex-item-10">
+         <img src="Dibujo 1.jpg">
+      </div>
+      <div class="flex-item-11">
+         <img src="Olaf.jpg">
+      </div>
+      <div class="flex-item-12">
+         <img src="Genie.jpg">
+      </div>
+      <div class="flex-item-13">
+         <img src="Lego.jpg">
+      </div>
+   </div>
+
+   <div class="flex-container-5">
+      <div>
+         <img src="Pokémon.jpg">
+      </div>
+      <div>
+         <img src="Auto realista.jpg">
+      </div>
+   </div>
+
+   <div class="flex-container-6">
+      <div class="contacto">
+         <p class="mail">jdomingoarte@gmail.com</p>
+         <ul>
+            <li><a class="contactame" href="mailto:jdomingoarte@gmail.com" target="_blank">Contacto</a></li>
+            <li><img class="thumbnail" src="thumbnail.avif"></li>
+         </ul>
+      </div>
+   </div>
+
+   <div class="flex-container-7">
+      <div class="footer">
+         <p>&copy;2024</p>
+         <p>All rights Reserved</p>
+         <p>José Domingo Espinoza</p>
+      </div>
+   </div>
+
+</body>
+</html>
